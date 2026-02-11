@@ -1,0 +1,22 @@
+
+new_tab bb
+layout splits:split_axis=vertical
+enabled_layouts splits:split_axis=vertical
+set_layout_state {"pairs": {"one": 1}, "opts": {"default_axis_is_horizontal": false}, "class": "Splits", "all_windows": {"active_group_idx": 0, "active_group_history": [2, 3, 1], "window_groups": [{"id": 1, "window_ids": [1]}]}}
+cd /home/felixwanders/
+
+launch 'kitty-unserialize-data={"id": 1, "cmd_at_shell_startup": "/usr/bin/btop"}'
+focus
+
+new_tab swh-web
+layout splits:split_axis=vertical
+enabled_layouts splits:split_axis=vertical
+set_layout_state {"pairs": {"bias": 0.59375, "one": 4, "two": {"horizontal": false, "one": 7, "two": 8}}, "opts": {"default_axis_is_horizontal": false}, "class": "Splits", "all_windows": {"active_group_idx": 2, "active_group_history": [6, 5, 4, 8, 7], "window_groups": [{"id": 4, "window_ids": [4]}, {"id": 7, "window_ids": [8]}, {"id": 8, "window_ids": [9]}]}}
+cd /home/felixwanders/repos/swh-environment/swh-web
+
+launch 'kitty-unserialize-data={"id": 4}'
+launch 'kitty-unserialize-data={"id": 8, "cmd_at_shell_startup": "yarn start-dev"}'
+launch 'kitty-unserialize-data={"id": 9, "cmd_at_shell_startup": "source /home/felixwanders/repos/swh/bin/activate && python manage.py runserver --nostatic --settings=swh.web.settings.development"}' --cwd=repos/swh-environment/swh-web/swh/web
+focus
+
+focus_tab 1
