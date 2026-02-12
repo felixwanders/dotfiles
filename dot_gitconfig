@@ -8,3 +8,5 @@
 	smudge = git-lfs smudge -- %f
 [init]
 	defaultBranch = main
+[url "git@gitlab.softwareheritage.org:"]
+    pushInsteadOf = https://gitlab.softwareheritage.org
