@@ -47,3 +47,4 @@ Cmd-S-tab = "goto_previous_buffer"
 
 [keys.normal.space]
 "H" = ":toggle lsp.display-inlay-hints"
+B = ":echo %sh{commit=$(git blame -L %{cursor_line},%{cursor_line} --porcelain %{buffer_name} | sed -n '1s/ .*//p'); info=$(git show -s --format='%%an|%%s|%%ad' --date=format:'%%d. %%b %%Y' \"$commit\"); IFS='|' read -r name msg date <<<\"$info\"; printf '%%s - %%s - %%s' \"$name\" \"$msg\" \"$date\"}"
