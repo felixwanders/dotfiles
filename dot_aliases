@@ -54,3 +54,4 @@ alias ffff="fvm flutter clean && fvm flutter pub get && fvm dart run build_runne
 alias fffff="fvm flutter clean && fvm flutter pub get && fvm dart run build_runner build --delete-conflicting-outputs && fvm dart run flutter_launcher_icons && fvm dart run flutter_native_splash:create && fvm flutter gen-l10n && fvm dart format -l 120 . && fvm dart run import_sorter:main --no-comments && fvm flutter test test/unit_test/app_test.dart -r expanded -j 1"
 
 alias sss="source /home/felixwanders/repos/swh/bin/activate"
+alias xclipp="xclip -sel clip"
