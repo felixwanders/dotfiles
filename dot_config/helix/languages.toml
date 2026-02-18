@@ -55,8 +55,25 @@ auto-format = true
 # html
 [[language]]
 name = "html"
-auto-format = false
+scope = "text.html.basic"
+injection-regex = "html"
+file-types = [
+  "html",
+  "htm",
+  "shtml",
+  "xhtml",
+  "xht",
+  "jsp",
+  "asp",
+  "aspx",
+  "jshtm",
+  "volt",
+  "rhtml",
+  "cshtml",
+]
+block-comment-tokens = { start = "<!--", end = "-->" }
 language-servers = ["vscode-html-language-server", "emmet-lsp"]
+auto-format = true
 
 # css
 [[language]]
@@ -79,3 +96,22 @@ formatter = { command = "prettier", args = [
   "svelte",
 ] }
 auto-format = true
+
+# django
+[[language]]
+name = "htmldjango"
+scope = "source.htmldjango"
+injection-regex = "htmldjango"
+roots = []
+file-types = []
+indent = { tab-width = 2, unit = " " }
+language-servers = ["djlsp", "vscode-html-language-server"]
+formatter = { command = "djlint", args = [
+  "--reformat",
+  "--profile=django",
+  "--indent=2",
+  "--blank-line-after-tag=load,extends,include,endblock",
+  "--format-css",
+  "--format-js",
+  "-",
+] }
