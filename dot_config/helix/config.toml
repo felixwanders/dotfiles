@@ -33,6 +33,9 @@ focus-lost = true
 after-delay.enable = true
 after-delay.timeout = 3000
 
+[editor.statusline]
+center = ["file-type"]
+
 [keys.normal]
 x = "select_line_below"
 X = "select_line_above"
