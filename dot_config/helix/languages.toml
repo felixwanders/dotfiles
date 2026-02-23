@@ -115,3 +115,4 @@ formatter = { command = "djlint", args = [
   "--format-js",
   "-",
 ] }
+auto-format = true
