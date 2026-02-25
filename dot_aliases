@@ -16,6 +16,7 @@ alias y="paru"
 alias hx="hx"
 alias x="hx"
 alias xx="hx ."
+alias xxx="x $(g diff --staged --name-only) $(g diff --name-only)"
 alias yy="yazi"
 alias rr='yazi'
 alias open-webui="DATA_DIR=~/.open-webui uvx --python 3.11 open-webui@latest serve"
