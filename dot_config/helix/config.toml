@@ -1,4 +1,4 @@
-theme = { dark = "dracula", light = "ayu_light" }
+theme = { dark = "dracula", light = "solarized_light" }
 
 [editor]
 line-number = "relative"
