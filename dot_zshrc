@@ -48,9 +48,12 @@ setopt HIST_FIND_NO_DUPS
 . $HOME/.aliases
 
 # sets env variables used by the shell
-export VISUAL=helix
+export VISUAL=hx
 export EDITOR=$VISUAL
 export PAGER=bat
+
+# helix runtime
+export HELIX_RUNTIME=~/helix/runtime
 
 # sets some useful env variables for various programs
 export MAKEFLAGS="-j$(nproc)"

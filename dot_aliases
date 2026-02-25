@@ -13,9 +13,9 @@ alias noconf="grep '^[^#;]'"
 
 alias hh="htop"
 alias y="paru"
-alias hx="helix"
-alias x="helix"
-alias xx="helix ."
+alias hx="hx"
+alias x="hx"
+alias xx="hx ."
 alias yy="yazi"
 alias rr='yazi'
 alias open-webui="DATA_DIR=~/.open-webui uvx --python 3.11 open-webui@latest serve"
