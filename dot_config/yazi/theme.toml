@@ -1,6 +1,6 @@
 [flavor]
-dark = "vscode-dark-plus"
-light = "vscode-dark-plus"
+dark = "dracula"
+light = "kanagawa-lotus"
 
 [mgr]
 border_style = { fg = "black" }

@@ -1,0 +1,12 @@
+[plugin]
+deps = []
+
+[[flavor.deps]]
+use = "muratoffalex/kanagawa-lotus"
+rev = "00dcc74"
+hash = "8fe01c79d91d7154ce231334cc7275f2"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:dracula"
+rev = "3001521"
+hash = "8589ae0231756a9daf9c072f31b1fe0"
