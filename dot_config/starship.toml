@@ -5,7 +5,15 @@ success_symbol = ''
 error_symbol = '⚠️'
 
 [directory]
-home_symbol = "🌈"
+home_symbol = ""
+
+[custom.dark]
+when = '~/.isgnomedark.zsh'
+command = "echo 🌙"
+
+[custom.light]
+when = '~/.isgnomelight.zsh'
+command = "echo 🌈"
 
 [bun]
 format = "via [$symbol]($style)"
