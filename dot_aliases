@@ -17,9 +17,7 @@ alias hx="hx"
 alias x="hx"
 alias xx="hx ."
 xxx() {
-  local files
-  files=($(g diff --staged --name-only) $(g diff --name-only))
-  x "${files[@]}"
+  x $(git status -s | cut -c4-)
 }
 alias yy="yazi"
 alias rr='yazi'
