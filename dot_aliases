@@ -17,7 +17,10 @@ alias hx="hx"
 alias x="hx"
 alias xx="hx ."
 xxx() {
-  x $(git status -s | cut -c4-)
+  x $(git status --porcelain=v1 -uall | awk '{
+    x=substr($0,1,1); y=substr($0,2,1);
+    if (x!="D" && y!="D" && (x=="A" || x=="M" || y=="M" || substr($0,1,2)=="??")) print
+  }'| cut -c4-)
 }
 alias yy="yazi"
 alias rr='yazi'
