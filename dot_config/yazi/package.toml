@@ -10,3 +10,8 @@ hash = "8fe01c79d91d7154ce231334cc7275f2"
 use = "yazi-rs/flavors:dracula"
 rev = "3001521"
 hash = "8589ae0231756a9daf9c072f31b1fe0"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-latte"
+rev = "c02c804"
+hash = "b8f46853c27707115f25f3423a47bd38"

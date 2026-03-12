@@ -1,6 +1,6 @@
 [flavor]
 dark = "dracula"
-light = "kanagawa-lotus"
+light = "catppuccin-latte"
 
 [mgr]
 border_style = { fg = "black" }
