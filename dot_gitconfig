@@ -10,3 +10,5 @@
 	defaultBranch = main
 [url "git@gitlab.softwareheritage.org:"]
     pushInsteadOf = https://gitlab.softwareheritage.org
+[pull]
+	rebase = true
