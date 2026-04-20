@@ -1,0 +1,16 @@
+[user]
+	email = felixgif@gmail.com
+	name = felixwanders
+[core]
+    sshCommand = "ssh -i ~/.ssh/id_ed25519"
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[includeIf "gitdir:~/repos/work/"]
+    path = .gitconfig-work
