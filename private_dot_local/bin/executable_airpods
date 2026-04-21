@@ -1,0 +1,25 @@
+#!/bin/bash
+MAC="70:8C:F2:69:60:24"
+SINK="bluez_output.${MAC//:/_}.1"
+
+echo "🔧 Starting bluetooth service..."
+sudo systemctl start bluetooth
+sleep 2
+
+echo "⚡ Powering on bluetooth..."
+bluetoothctl power on
+sleep 1
+
+echo "🔗 Connecting to AirPods ($MAC)..."
+bluetoothctl connect $MAC
+
+echo "⏳ Waiting for sink to register..."
+for i in $(seq 1 10); do
+  pactl list sinks short | grep -q "$SINK" && break
+  sleep 1
+done
+
+echo "🔊 Setting audio output to AirPods..."
+pactl set-default-sink $SINK
+
+echo "✅ Done! AirPods connected and set as audio output."
