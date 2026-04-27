@@ -61,3 +61,4 @@ alias fffff="fvm flutter clean && fvm flutter pub get && fvm dart run build_runn
 
 alias sss="source /home/felixwanders/repos/swh/bin/activate"
 alias xclipp="xclip -sel clip"
+alias burpsuitefix="java -Dsun.java2d.dpiaware=true -Dsun.java2d.uiScale=2.0 -jar /usr/share/burpsuite/burpsuite.jar"
