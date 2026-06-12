@@ -85,3 +85,6 @@ function a() {
 	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
+
+# opencode
+export OPENCODE_TUI_CONFIG="~/.config/opencode/tui.json"
