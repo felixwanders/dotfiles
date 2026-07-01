@@ -81,10 +81,18 @@ if [[ ":$FPATH:" != *":$HOME/.zsh/completions:"* ]]; then export FPATH="$HOME/.z
 function a() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
-	IFS= read -r -d '' cwd < "$tmp"
+	IFS= read -r -d '' cwd <"$tmp"
 	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
 
 # opencode
 export OPENCODE_TUI_CONFIG="~/.config/opencode/tui.json"
+function oo() {
+	HTTPS_PROXY=http://127.0.0.1:8888 HTTP_PROXY=http://127.0.0.1:8888 NO_PROXY=localhost,127.0.0.1	opencode "$@"
+}
+
+# vscode
+function cc() {
+	code --use-angle=vulkan --enable-features=Vulkan .
+}

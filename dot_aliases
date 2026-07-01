@@ -33,8 +33,6 @@ alias py="python3"
 alias ipy="ipython3"
 alias ipi="ipython -i"
 
-alias cc="code ."
-
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit -m"
