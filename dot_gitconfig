@@ -14,3 +14,5 @@
 	rebase = true
 [includeIf "gitdir:~/repos/work/"]
     path = .gitconfig-work
+[help]
+	autocorrect = prompt
