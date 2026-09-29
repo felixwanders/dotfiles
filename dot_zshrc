@@ -37,6 +37,10 @@ compinit
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
+# init direnv
+eval "$(direnv hook zsh)"
+export DIRENV_LOG_FORMAT=
+
 # configures zsh histfile
 HISTSIZE=999999999
 SAVEHIST=$HISTSIZE
