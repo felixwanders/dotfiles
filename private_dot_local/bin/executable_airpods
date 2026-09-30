@@ -2,6 +2,10 @@
 MAC="70:8C:F2:69:60:24"
 SINK="bluez_output.${MAC//:/_}.1"
 
+echo "sudo rfkill unblock bluetooth"
+sudo rfkill unblock bluetooth
+sleep 1
+
 echo "🔧 Starting bluetooth service..."
 sudo systemctl start bluetooth
 sleep 2
